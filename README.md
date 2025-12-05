@@ -9,7 +9,7 @@ When it is connected to an **Arduino**, the board can read this voltage on an an
 
 ---
 
-## ⚙️ Functions
+##  Functions
 The main function of the sensor is to **sense the surrounding temperature** and provide a signal that the Arduino can read.  
 
 With this sensor and an Arduino, you can:
@@ -19,7 +19,7 @@ With this sensor and an Arduino, you can:
 
 ---
 
-## 🔌 How It Works
+##  How It Works
 The sensor uses a temperature‑sensitive component (a thermistor) whose resistance changes with temperature.  
 The module converts this change in resistance into a changing **analog voltage**. 
 
@@ -28,7 +28,7 @@ By reading this value repeatedly, the Arduino can track how the temperature goes
 
 ---
 
-## 🛠️ How to Use It
+##  How to Use It
 
 ### 🧾 Components You’ll Need
 - Arduino Uno
