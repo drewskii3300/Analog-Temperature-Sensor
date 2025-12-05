@@ -15,7 +15,7 @@ The main function of the sensor is to **sense the surrounding temperature** and 
 With this sensor and an Arduino, you can:
 - Measure the **current temperature** of the environment.  
 - Monitor **temperature changes over time**.  
-- Use temperature readings to **control other devices**, like fans, LEDs, or buzzers (for example, when it gets too hot or too cold).
+- Use temperature readings to **control other devices**, like fans, LEDs, or buzzers like when it gets hot or cold).
 
 ---
 
@@ -42,3 +42,5 @@ By reading this value repeatedly, the Arduino can track how the temperature goes
 | GND        | GND on Arduino     |
 | OUT        | A0 on Arduino      |
 
+
+<img width="500" height="645" alt="2025-12-04 222822" src="https://github.com/user-attachments/assets/b4c8df9e-9ee1-4f9c-9554-1d4ed48fb033" />
