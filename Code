@@ -1,0 +1,36 @@
+// KS0033 Keyestudio Analog Temperature Sensor with Arduino Uno
+
+const int sensorPin = A0;   // Connect sensor signal pin to A0
+int sensorValue = 0;        // Variable to store raw analog reading
+float voltage = 0;          // Variable to store converted voltage
+float temperatureC = 0;     // Variable to store temperature in Celsius
+
+void setup() {
+  Serial.begin(9600);       // Start serial communication
+}
+
+void loop() {
+  // Read the analog value (0–1023)
+  sensorValue = analogRead(sensorPin);
+
+  // Convert to voltage (Arduino Uno uses 5V reference)
+  voltage = sensorValue * (5.0 / 1023.0);
+
+  // Convert voltage to temperature (approximation for KS0033 thermistor)
+  // The KS0033 is based on a thermistor, so exact conversion depends on calibration.
+  // A simple approximation: map voltage linearly to temperature.
+  // For better accuracy, use a Steinhart-Hart equation with known thermistor constants.
+  temperatureC = voltage * 100.0;  // Rough estimate: 0.01V ≈ 1°C
+
+  // Print results
+  Serial.print("Analog Value: ");
+  Serial.print(sensorValue);
+  Serial.print(" | Voltage: ");
+  Serial.print(voltage);
+  Serial.print(" V");
+  Serial.print(" | Temperature: ");
+  Serial.print(temperatureC);
+  Serial.println(" °C");
+
+  delay(1000); // Wait 1 second before next reading
+}
